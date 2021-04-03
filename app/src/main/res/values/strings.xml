@@ -9,4 +9,9 @@
     <string name="root_grant_root_permission_n_non_root_use_virtual_space_app">* Root : Grant Root Permission\n* Non Root : Use Virtual Space App</string>
     <string name="root">ROOT</string>
     <string name="non_root">NON ROOT</string>
+    <string name="go_to_github_repository">Go To Github Repository</string>
+    <string name="dump_metadata">Dump Metadata [Il2cpp]</string>
+    <string name="clear">Clear</string>
+    <string name="rebuild_sofile">Don\'t Rebuild SoFile</string>
+    <string name="libname_leave_blank_if_wanna_use_default">LibName [leave blank if wanna use default]</string>
 </resources>
