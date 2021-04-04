@@ -1,14 +1,15 @@
 # LibDumper
 This Project Is Using For Make You Easy Dump Lib From The Memory And Rebuild it 
 
-# ChangeLogs 3.0 :
-- new ui
+# Changelog 3.2 :
+- support root devices
+
+# Features
 - support for dumping global-metadata.dat from memory
-- improving speed read & writing file
+- speed read & writing file
 - build based kotlin
-- now only support for non root devices [use virtual space]
-- releasing app-debug.apk
-- releasing app-debug64.apk
+- support for (root) & (non root devices [use virtual space])
+- support 32bit and 64bit game
 
 # Usage :
 - run the app game 

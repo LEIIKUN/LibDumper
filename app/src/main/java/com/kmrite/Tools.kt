@@ -16,25 +16,21 @@ data class Memory(val pkg: String) {
 class Tools {
     companion object {
         private const val TAG = "TOOLS : "
-        fun TextView.dumpFile(pkg: String, file: String) {
-            this.append("Begin Dumping For $file\n")
+        fun dumpFile(pkg: String, file: String): String {
+            var log = ""
+            log += ("Begin Dumping For $file\n")
             val mem = Memory(pkg)
             getProcessID(mem)
-            this.append("PID : ${mem.pid}\n")
+            log += ("PID : ${mem.pid}\n")
             if (mem.pid > 1 && mem.sAddress < 1L) {
                 parseMap(mem, file)
                 parseMapEnd(mem, file)
-                this.append(
-                    "Start Address : ${longToHex(mem.sAddress)}\nEnd Address : ${
-                        longToHex(
-                            mem.eAddress
-                        )
-                    }\n"
-                )
+                log += ("Start Address : ${longToHex(mem.sAddress)}\n")
+                log += ("End Address : ${longToHex(mem.eAddress)}\n")
                 if (mem.sAddress > 1L) {
                     RandomAccessFile("/proc/${mem.pid}/mem", "r").use { mems ->
                         mems.channel.use {
-                            this.append("Saving...\n")
+                            log += ("Saving...\n")
                             val buff: ByteBuffer =
                                 ByteBuffer.allocate((mem.eAddress - mem.sAddress).toInt())
                             it.read(buff, mem.sAddress)
@@ -42,11 +38,12 @@ class Tools {
                                 out.write(buff.array())
                                 out.close()
                             }
-                            this.append("Result : /sdcard/$file\n\n")
+                            log += ("Result : /sdcard/$file\n\n")
                         }
                     }
                 }
             }
+            return log
         }
 
         private fun longToHex(ling: Long): String {
