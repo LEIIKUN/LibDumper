@@ -1,6 +1,5 @@
 package com.kmrite
 
-import android.widget.TextView
 import java.io.*
 import java.nio.ByteBuffer
 

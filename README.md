@@ -6,7 +6,7 @@ This Project Is Using For Make You Easy Dump Lib From The Memory And Rebuild it
 
 # Features
 - support for dumping global-metadata.dat from memory
-- speed read & writing file
+- fast read & writing file
 - build based kotlin
 - support for (root) & (non root devices [use virtual space])
 - support 32bit and 64bit game
@@ -20,3 +20,6 @@ This Project Is Using For Make You Easy Dump Lib From The Memory And Rebuild it
 - select dump "ue4" or "il2cpp"
 - wait progress done
 - check your /sdcard
+
+# Credit :
+- libsu : https://github.com/topjohnwu/libsu
