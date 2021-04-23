@@ -1,5 +1,5 @@
 # LibDumper
-This Project Is Using For Make You Easy Dump Lib From The Memory And Rebuild it 
+This Project Is Using For Make You Easy Dump Lib From The Memory
 
 # Changelog 3.2 :
 - support root devices
